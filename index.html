@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My page</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="body" class="dark">
+    <header id="welcome-section">
+        <img src="img/cat.jpg" alt="me" id="myImage" >
+        <h1 id="me">
+            HI! My name is Marcelo Amurrio.<br>
+        </h1>
+    </header>
+    <nav>
+        <ul id="navbar">
+            <li>
+                <button class="selected" id="button1" class="button" onclick="return show('page1', 'page2', 'page3', 'page4', 'page5','button1','button2','button3','button4','button5')">me</button>
+            </li>
+            <li>
+                <button id="button2" onclick="return show('page2', 'page1', 'page3', 'page4', 'page5','button2','button1','button3','button4','button5')">game</button>
+            </li>
+            <li>
+                <button id="button3" onclick="return show('page3', 'page1', 'page2', 'page4', 'page5','button3','button2','button1','button4','button5')">skills</button>
+            </li>
+            <li>
+                <button id="button4" onclick="return show('page4', 'page1', 'page2', 'page3', 'page5','button4','button2','button3','button1','button5')">contact</button>
+            </li>
+            <li>
+                <button id="button5" onclick="return show('page5', 'page1', 'page2', 'page3', 'page4','button5','button2','button3','button4','button1')">options</button>
+            </li>
+        </ul>
+    </nav>
+    <div id="page1" class="information">
+        <p>
+            hi<br>
+            I am from Buenos Aires,Argentina, i am on 2nd year of software engineering and i made this site to make easier to know and contact me.<br>
+            here i'll be posting recent projects and important info about me. <br>
+            my <a href="https://www.linkedin.com/in/marcelo-amurrio-988798219/?originalSubdomain=ar" target="blank">linkedin</a><br>
+            here is my <a href="https://github.com/hello-ecram" target="blank">github</a><br>
+        </p>
+        
+    </div>
+    <div id="page2" class="information" style="display:none;">
+        <p>
+            this little game was mede for thinking in a adictive little game for both mobile and desktop web <br>
+            enjoy it
+        </p>
+        <div id="game">
+            <div class="space"></div>
+            <div id="player"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div id="enemy"></div>
+            <div class="space"></div>
+        </div>
+        <div id="mobile_controls" onclick="move_player()">
+            <button class="left_up"></button>
+            <button class="up"></button>
+            <button class="right_up"></button>
+            <button class="left"></button>
+            <button class="center"></button>
+            <button class="right"></button>
+            <button class="left_down"></button>
+            <button class="down"></button>
+            <button class="right_down"></button>
+        </div>
+    </div>
+    <div id="page3" class="information" style="display:none;">
+        <p>
+            languages:english and spanish:
+        </p>
+        <div class="bar-container"><div class="bar-language">high&nbsp;</div></div>
+        <p>
+            frontend:javascript, react, html and css:
+        </p>
+        <div class="bar-container"><div class="bar-frontend">medium&nbsp;</div></div>
+        <p>
+            backend:python and django:
+        </p>
+        <div class="bar-container"><div class="bar-backend">low&nbsp;</div></div>
+    </div>
+    <div id="page4" class="information" style="display:none;">
+        <p>
+            this is the comment section, first upload your contact info then make your comment and submit
+        </p>
+        <div class="form">
+            <form action="" method="get">
+                <label for="gmail">gmail:</label><br>
+                <input type="email" id="gmail" name="gmail" placeholder="gmail here" required autocomplete="off"><br>
+                <label for="subject">subject:</label><br>
+                <input type="text" id="subject" name="subject" placeholder="subject here" required autocomplete="off"><br>
+                <label for="comment">comment:</label><br>
+                <textarea name="comment" id="comment" cols="30" rows="10" placeholder="comment here" required name="comment" autocomplete="off"></textarea>
+                <input id="submit" type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+    <div id="page5" class="information" style="display:none;">
+        <p>
+            here you can change some features of the page <br>
+        </p>
+        <div>
+            change theme:
+            <select id="themeselector" onchange="changeTheme()">
+                <option class="themeDark" value="1">Dark</option>
+                <option class="themeWhite" value="2">White</option>
+                <option class="themeDarkblue" value="3">blue</option>
+              </select>              
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
